@@ -1,0 +1,80 @@
+﻿<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Backbone Music Store</title>
+		<script src="assets/js/libs/jquery-1.8.3.min.js"></script>
+		<script src="assets/js/libs/underscore-min.js"></script>
+		<script src="assets/js/libs/backbone-min.js"></script>
+		<script src="assets/js/libs/backbone-validation-min.js"></script>
+		<script src="assets/js/libs/bootstrap.min.js"></script>
+
+		<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+		<link rel="stylesheet" href="assets/css/bootstrap-responsive.min.css">
+		<link rel="stylesheet" href="assets/css/styles.css">
+	</head>
+	<body>
+		<div class="navbar navbar-inverse navbar-fixed-top">
+			<div class="navbar-inner">
+				<div class="container">
+				    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+				    </a>
+					<a class="brand" href="#">Backbone Music Store</a>
+					<div class="nav-collapse collapse">
+						<!-- MENU -->
+					</div><!-- /.nav-collapse -->
+				</div><!-- /.container -->
+			</div><!-- /.navbar-inner -->
+        </div><!-- /.navbar -->
+
+		<div class="container-fluid">
+			<div class="row-fluid">
+				<div class="span2">
+					<div class="well sidebar-nav">
+						<span class="nav-header">Genres</span>
+						<ul id="genre-menu" class="nav nav-list">
+
+						</ul>
+					</div>
+				</div>
+				<div class="span10">
+					<div id="content" class="span11 container">
+
+					</div><!-- /.container -->
+				</div>
+			</div>
+		</div>
+
+		<script type="text/template" id="genre-item-template">
+			<li><a href='#genres/<%= id %>'><%= name %></a></li>
+		</script>
+
+		<script type="text/template" id="genre-template">
+			<div id="alert" class="alert nodisplay"></div>
+			<form class="well form-horizontal">
+				<div class="control-group">
+					<label for="id" class="control-label">ID</label>
+					<div class="controls">
+						<input type="text" name="id" id="id" value ="<%= id %>" class="span1" disabled>
+					</div>
+				</div>
+				<div class="control-group">
+					<label for="name" class="control-label">Name</label>
+					<div class="controls">
+						<input type="text" name="name" id="name" value="<%= name %>">
+					</div>
+				</div>
+				<div class="control-group">
+					<div class="controls">
+						<a class="btn btn-primary">Update</a>
+					</div>
+				</div>
+			</form>
+		</script>
+
+		<script src="assets/js/main.js"></script>
+	</body>
+</html>
